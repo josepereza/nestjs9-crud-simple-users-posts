@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserService } from 'src/user/user.service';
 import { Repository } from 'typeorm';
@@ -16,6 +16,7 @@ export class PostService {
   async create(createPostDto: CreatePostDto) {
     const { title, content, userId } = createPostDto;
     const user = await this.userService.findOne(userId);
+
     const post = new Post();
     post.title = title;
     post.content = content;
@@ -24,7 +25,7 @@ export class PostService {
   }
 
   findAll() {
-    return this.postRepository.find()
+    return this.postRepository.find();
   }
 
   findOne(id: number) {
