@@ -31,7 +31,7 @@
 ```bash
 $ npm install
 ```
-* Despues tenemos que crear un archivo de entorno   '.env' y copiar el contenido de '.env_plantilla'
+* Despues tenemos que crear un archivo de entorno   '.env' y copiar el contenido de '.env_plantilla' y pegarlo en '.env'
 ## Running the app
 
 ```bash
