@@ -25,7 +25,12 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
+## Prueba
+```
+$ # POST to /auth/login
+$ curl -X POST http://localhost:3000/auth/login -d '{"username": "john", "password": "changeme"}' -H "Content-Type: application/json"
+$ # result -> {"userId":1,"username":"john"}
+```
 ## Installation
 
 ```bash
