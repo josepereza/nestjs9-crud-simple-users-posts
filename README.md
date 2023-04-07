@@ -23,7 +23,7 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
-
+* Contiene 2 ramas: 1 api users-posts , y otra api users-posts con autentication
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
