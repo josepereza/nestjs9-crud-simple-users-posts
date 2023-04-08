@@ -35,7 +35,7 @@ $ # result -> {"userId":1,"username":"john"}
 * Para trabajar con angular tenemos que cambiar las rutas autentificadas  a POST en lugar de GET porque HttpClient no admite body
 con los verbos GET
 ```
-* nestjs
+### nestjs
 
 
 @UseGuards(LocalAuthGuard)
@@ -46,7 +46,7 @@ con los verbos GET
 ```
 
 ```
-* Angular
+### Angular
 
 $ loginComponent
 
