@@ -36,7 +36,7 @@ $ # result -> {"userId":1,"username":"john"}
 con los verbos GET
 ```
 ### nestjs
-
+$ user.controller.ts 
 
 @UseGuards(LocalAuthGuard)
   @Post('users')
