@@ -36,7 +36,7 @@ $ # result -> {"userId":1,"username":"john"}
 con los verbos GET
 ```
 ### nestjs
-$ user.controller.ts 
+// user.controller.ts 
 
 @UseGuards(LocalAuthGuard)
   @Post('users')
@@ -48,7 +48,7 @@ $ user.controller.ts
 ```
 ### Angular
 
-$ loginComponent
+// loginComponent
 
  login() {
     this.userService.login(this.loginForm.value).subscribe((data: any) => {
@@ -62,7 +62,7 @@ $ loginComponent
     });
   }
   
-  $ userService
+  // userService
   
    login(usuario: any) {
     return this.httpClient.post('http://localhost:3000/auth/login', usuario);
