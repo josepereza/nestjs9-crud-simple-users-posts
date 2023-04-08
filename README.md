@@ -31,6 +31,39 @@ $ # POST to /auth/login
 $ curl -X POST http://localhost:3000/auth/login -d '{"username": "john", "password": "changeme"}' -H "Content-Type: application/json"
 $ # result -> {"userId":1,"username":"john"}
 ```
+## Angular
+* Para trabajar con angular tenemos que cambiar las rutas autentificadas  a POST en lugar de GET porque HttpClient no admite body
+con los verbos GET
+* nestjs
+```
+@UseGuards(LocalAuthGuard)
+  @Post('users')
+  findAll() {
+    return this.userService.findAll();
+  }
+```
+* Angular
+```
+$ loginComponent
+
+ login() {
+    this.userService.login(this.loginForm.value).subscribe((data: any) => {
+      console.log('data del login', data);
+      console.log('form',this.loginForm.value.username)
+      localStorage.setItem('username', this.loginForm.value.username!);
+      localStorage.setItem('password',this.loginForm.value.password!);
+       localStorage.setItem('userId',data.id)
+     
+      this.router.navigate(['/users']);
+    });
+  }
+  
+  $ userService
+  
+   login(usuario: any) {
+    return this.httpClient.post('http://localhost:3000/auth/login', usuario);
+  }
+```
 ## Installation
 
 ```bash
